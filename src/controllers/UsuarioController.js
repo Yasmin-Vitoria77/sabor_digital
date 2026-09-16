@@ -1,7 +1,18 @@
-const UsuarioController = require ('../services/UsuarioService')
+const UsuarioService = require ('../services/UsuarioService')
 
 class UsuarioController{
     async registrar(req, res){
+        /*#swagger.parameters['body'] = {
+            in: 'body',
+            description: 'Dados do novo usuário',
+            schema: {
+                $nome: 'Administrador',
+                $email: 'admin@sabordigital.com',
+                $senha: '123456',
+                papel: 'admin'
+            }
+        }
+        */
         try{
             const token = await UsuarioService.registrarUsuario(req.body);
             res.status(201).json(token);

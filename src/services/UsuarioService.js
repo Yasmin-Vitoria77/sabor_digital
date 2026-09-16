@@ -1,5 +1,4 @@
 const UsuarioRepository = require('../repositories/UsuarioRepository');
-const UsuarioService = require ('../repositories/UsuarioRepository');
 const bcrypt = require('bcryptjs'); // Criptografar 
 const jwt = require('jsonwebtoken'); // Gerar token
 
